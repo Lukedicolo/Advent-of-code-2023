@@ -3,11 +3,7 @@ Q1_score, Q2_score = 0, 0
 
 for line in file:
     Q1_digits, Q2_digits = [], []
-    number_words = [
-        'one', 'two', 'three',
-        'four', 'five', 'six',
-        'seven', 'eight', 'nine'
-    ]
+    number_words = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 
     # Check from each character in the line,
     for index, char in enumerate(line):
@@ -29,7 +25,4 @@ for line in file:
     Q1_score += Q1_line_value
     Q2_score += Q2_line_value
 
-print(
-    'Calibration value sum for Question 1:', Q1_score, 
-    '\nCalibration value sum for Question 2:', Q2_score
-)
+print('Calibration value sum for Question 1:', Q1_score,'\nCalibration value sum for Question 2:', Q2_score)
