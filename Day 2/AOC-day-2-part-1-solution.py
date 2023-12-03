@@ -2,7 +2,6 @@
 import re
 
 # -- Methods --
-
 # Returns the first integer in a string via regex check
 def extract_int(input_string):
     try:
@@ -12,9 +11,7 @@ def extract_int(input_string):
 
 # Checks if a string contains 'red', 'green' or 'blue', then extracts an integer if match.
 def check_colours(round_details:str):
-    red_count = 0
-    green_count = 0
-    blue_count = 0
+    red_count, green_count, blue_count = 0, 0, 0
 
     colour_sections = round_details.split(',')
     for section in colour_sections:
@@ -26,7 +23,6 @@ def check_colours(round_details:str):
             blue_count = extract_int(section)
 
     return [red_count, green_count, blue_count]
-
 
 # -- Script starts here --
 file = open('input.txt', 'r').readlines()
@@ -64,7 +60,3 @@ for line in file:
         ID_total += game_ID
 
 print('The sum of valid game IDs is: {}'.format(ID_total))
-
-
-
-
